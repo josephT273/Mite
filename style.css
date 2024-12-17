@@ -67,13 +67,16 @@ body {
 }
 
 nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #222;
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
-    background-color: #299de3;
 }
 
 nav .logo {
