@@ -1,0 +1,372 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #CCCCCC;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+/* Add Glow on Hover for Portfolio Items */
+.portfolio-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff6600, 0 0 30px #ff9900;
+    transition: 0.3s ease-in-out;
+}
+
+/* Navbar */
+.background {
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./images/background.jpg);
+}
+
+.background .moto {
+    color: white;
+}
+
+.background .moto h2 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.background .moto p {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: orange;
+}
+
+.background .logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid blue;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.background .logo img {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    background-color: #299de3;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    padding: 10px 50px;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section#about {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 32, 0, 0.7), rgba(21, 0, 0, 0.9)), url('./images/camera.png');
+}
+
+.section#about h2 {
+    font-size: 4rem;
+    color: #ff8800;
+}
+
+.section#about p {
+    font-size: larger;
+    color: white;
+    font-weight: bold;
+
+}
+
+.logo-designs {
+    color: white;
+}
+
+
+.work {
+    text-align: center;
+    font-size: 5rem;
+}
+
+#portfolio {
+    background-color: #41410e65;
+    height: auto;
+}
+
+/* Portfolio Section */
+#portfolio .portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: brown;
+}
+
+.portfolio-item.poster img {
+    height: 280px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    animation: ease-in-out 5s infinite;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.portfolio-item:hover {
+    scale: 1.05;
+}
+
+/* Contact Section */
+.footer {
+    color: white;
+    background-color: #222;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+
+/* Horizontal Scroll Section */
+.horizontal-scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    /* Adjust container width */
+    scrollbar-width: none;
+    /* Hide scrollbar */
+    position: relative;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in WebKit browsers */
+}
+
+.scroll-item {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 300px;
+    scroll-snap-align: center;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease, border 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Glow effect on hover */
+.scroll-item:hover {
+    transform: scale(1.1);
+    border: 2px solid #ff8800;
+    /* Orange glow effect */
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.7);
+}
+
+/* Scroll buttons */
+.scroll-button {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: #ff8800;
+    /* Orange background on hover */
+}
+
+.scroll-button.left {
+    transform: translateX(-60%);
+}
+
+.scroll-button.right {
+    transform: translateX(60%);
+}
+
+li {
+    list-style: none;
+}
+
+.social {
+    width: 35px;
+    padding: 5px;
+}
+
+.Email {
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-size: large;
+}
+
+/* Cursor Animation */
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00ffff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease-in-out;
+    animation: cursor-glow 1.5s infinite alternate;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ccff, 0 0 30px #0099ff;
+    z-index: 9999;
+}
+
+@keyframes cursor-glow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ccff;
+    }
+
+    100% {
+        transform: scale(1.2);
+        box-shadow: 0 0 15px #00ffff, 0 0 30px #00ccff;
+    }
+}
+
+/* Cursor Trail Effect */
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: trail-fade 1s ease-out forwards;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+@keyframes trail-fade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+#portfolio {
+    position: relative;
+    background: linear-gradient(135deg, #47363d, #858585, #664f50, #1f1718);
+    background-size: 400% 400%;
+    animation: glowing-bg-animation 10s ease infinite;
+    padding: 50px 20px;
+    box-shadow: 0 0 20px rgba(255, 126, 179, 0.5), 0 0 40px rgba(255, 117, 140, 0.5);
+    overflow: hidden;
+    color: white;
+}
+
+/* Glowing effect animation */
+@keyframes glowing-bg-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Add subtle glowing effect to section titles */
+#portfolio h2.title {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 20px 0;
+    animation: title-glow 3s infinite alternate;
+}
